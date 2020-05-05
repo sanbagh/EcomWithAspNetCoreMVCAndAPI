@@ -1,0 +1,3 @@
+Please make sure you have installed redis for windows(Or other OS if your machine has different OS) in order to work with API.
+Start web api project and redis server from command prompt.
+After staring web api and redis server start mvc application.
