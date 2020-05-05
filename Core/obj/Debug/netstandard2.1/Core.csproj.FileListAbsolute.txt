@@ -1,0 +1,16 @@
+D:\Learning\Web Development\ASP.NET Core\ecommerce\Core\bin\Debug\netstandard2.1\Core.deps.json
+D:\Learning\Web Development\ASP.NET Core\ecommerce\Core\bin\Debug\netstandard2.1\Core.dll
+D:\Learning\Web Development\ASP.NET Core\ecommerce\Core\bin\Debug\netstandard2.1\Core.pdb
+D:\Learning\Web Development\ASP.NET Core\ecommerce\Core\obj\Debug\netstandard2.1\Core.csprojAssemblyReference.cache
+D:\Learning\Web Development\ASP.NET Core\ecommerce\Core\obj\Debug\netstandard2.1\Core.AssemblyInfoInputs.cache
+D:\Learning\Web Development\ASP.NET Core\ecommerce\Core\obj\Debug\netstandard2.1\Core.AssemblyInfo.cs
+D:\Learning\Web Development\ASP.NET Core\ecommerce\Core\obj\Debug\netstandard2.1\Core.dll
+D:\Learning\Web Development\ASP.NET Core\ecommerce\Core\obj\Debug\netstandard2.1\Core.pdb
+D:\Learning\Web Development\ASP.NET Core\Assignment\Core\bin\Debug\netstandard2.1\Core.deps.json
+D:\Learning\Web Development\ASP.NET Core\Assignment\Core\bin\Debug\netstandard2.1\Core.dll
+D:\Learning\Web Development\ASP.NET Core\Assignment\Core\bin\Debug\netstandard2.1\Core.pdb
+D:\Learning\Web Development\ASP.NET Core\Assignment\Core\obj\Debug\netstandard2.1\Core.csprojAssemblyReference.cache
+D:\Learning\Web Development\ASP.NET Core\Assignment\Core\obj\Debug\netstandard2.1\Core.AssemblyInfoInputs.cache
+D:\Learning\Web Development\ASP.NET Core\Assignment\Core\obj\Debug\netstandard2.1\Core.AssemblyInfo.cs
+D:\Learning\Web Development\ASP.NET Core\Assignment\Core\obj\Debug\netstandard2.1\Core.dll
+D:\Learning\Web Development\ASP.NET Core\Assignment\Core\obj\Debug\netstandard2.1\Core.pdb

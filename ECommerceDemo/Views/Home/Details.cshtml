@@ -1,0 +1,22 @@
+﻿@model ProductToReturnDto
+
+<div class="row">
+    <div class="col-6">
+        <img src="@Model.PhotoUrl" alt="@Model.Name" class="img-fluid w-100" style="height: 80%;">
+    </div>
+    <div class="col-6">
+        <h3>@Model.Name</h3>
+        <p><strong>$@Model.SalePrice</strong></p>
+        @if (Helper.IsAuthenticated())
+        {
+    <div class="d-flex justify-content-start align-items-center">
+        <a asp-action="AddItemToCart" asp-controller="Cart" asp-route-id="@Model.Id" class="btn btn-outline-secondary mr-4">Add To Cart</a>
+        <a class="btn btn-outline-secondary" asp-action="Index" asp-controller="Home" style="width:auto">Back to Home</a>
+    </div>
+        }
+        <div class="mt-4">
+            <h4>Description</h4>
+            <p>@Model.Description</p>
+        </div>
+    </div>
+</div>

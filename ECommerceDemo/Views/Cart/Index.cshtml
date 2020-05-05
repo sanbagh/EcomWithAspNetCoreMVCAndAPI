@@ -1,0 +1,80 @@
+﻿@model CustomerBasket
+@{
+    ViewData["Title"] = "Cart";
+}
+<div class="container">
+    @if (Model.Items.Any())
+    {
+        <div class="row">
+            <div class="col-12">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th class="border-0 bg-light text-uppercase" scope="col">Product</th>
+                                <th class="border-0 bg-light text-uppercase" scope="col">Price</th>
+                                <th class="border-0 bg-light text-uppercase" scope="col">Quantity</th>
+                                <th class="border-0 bg-light text-uppercase" scope="col">Total</th>
+                                <th class="border-0 bg-light text-uppercase" scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{ decimal total = 0;}
+                            @foreach (var item in Model.Items)
+                            {
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <img src="@item.PhotoUrl" class="img-fluid" style="height: 50px;">
+                                            <div class="ml-2 d-inline-block align-middle">
+                                                <h5>
+                                                    <a asp-action="Details" asp-controller="Home" asp-route-id="@item.Id" class="text-dark">@item.Name</a>
+                                                </h5>
+                                                <span class="text-muted font-italic font-weight-normal">
+                                                    Type: @item.Type
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    @{ var salePrice = (@item.Price + @item.Price / 10); var subtotal = salePrice * item.Quantity;}
+                                    <td class="align-middle"><strong>$@salePrice</strong></td>
+                                    <td class="align-middle">
+                                        <a asp-action="DecrementQuantity" asp-route-id="@item.Id" class="fa fa-minus-circle text-warning mr-2"
+                                           style="cursor: pointer; font-size: 2em;"></a>
+                                        <span class="font-weight-bold" style="font-size: 1.5em;">@item.Quantity</span>
+                                        <a asp-action="IncrementQuantity" asp-route-id="@item.Id" class="fa fa-plus-circle text-warning ml-2"
+                                           style="cursor: pointer; font-size: 2em;"></a>
+                                    </td>
+                                    <td class="align-middle"><strong>$@subtotal</strong></td>
+                                    @{ total += subtotal;}
+                                    <td class="align-middle">
+                                        <a asp-action="RemoveItem" asp-route-id="@item.Id" style="cursor: pointer;" class="text-danger">
+                                            <i class="fa fa-trash" style="font-size: 2em;"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                    <hr />
+                    <div class="offset-10 col-1">
+                        <span class="font-weight-bold" style="margin-left: 10px;">$@total</span>
+                    </div>
+                    <br />
+                    <div class="offset-10 col-2">
+                        <a class="btn btn-outline-secondary" asp-action="PlaceOrder" asp-controller="Order" style="width:auto">Place Order</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="d-flex justify-content-center align-items-center">
+            <h1 class="mt-4 text-primary font-weight-bold">No Items in the shopping cart... </h1>
+            <a class="btn btn-outline-secondary mr-2" asp-action="Index" asp-controller="Home">Shop Now</a>
+        </div>
+
+    }
+</div>
+
